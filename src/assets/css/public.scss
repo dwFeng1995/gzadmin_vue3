@@ -1,0 +1,216 @@
+@charset "UTF-8";
+
+//文本对齐
+@each $var in left,center, right, justify {
+    .text-#{$var} {
+      text-align: $var !important;
+    }
+    .text-last-#{$var} {
+      text-align-last: $var !important;
+    }
+}
+
+//超出部分
+@each $var in hidden, scroll, auto, inherit {
+    .overflow-#{$var} {
+      overflow: $var;
+    }
+    .overflow-x-#{$var} {
+      overflow-x: $var;
+    }
+    .overflow-y-#{$var} {
+      overflow-y: $var;
+    }
+}
+
+@each $var in inline, block, inline-block, none {
+    .d-#{$var}{
+      display: $var;
+    }
+}
+
+/* flex 布局 */
+.flex- {
+    &row{
+      display: -webkit-flex;
+      display: flex;
+    }
+    &column{
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: column;
+    }
+    &row-r{
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: row-reverse;
+    }
+    &column-r{
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    &wrap{
+      flex-wrap: wrap;
+    }
+    &nowrap{
+      flex-wrap: nowrap;
+    }
+    &wrap-r{
+      flex-wrap: wrap-reverse;
+    }
+  
+    &grow-1{
+      flex-grow: 1;
+    }
+    &shrink-0{
+      flex-shrink: 0;
+    }
+  }
+  .justify-{
+    &center{
+      justify-content: center;
+    }
+    &end{
+      justify-content: flex-end;
+    }
+    &start{
+      justify-content: flex-start;
+    }
+    &between{
+      justify-content: space-between;
+    }
+    &around{
+      justify-content: space-around;
+    }
+  }
+  .align-{
+    &center{
+      align-items: center;
+    }
+    &start{
+      align-items: flex-start;
+    }
+    &end{
+      align-items: flex-end;
+    }
+    &baseline{
+      align-items: baseline;
+    }
+}
+  .align-content-{
+    &center{
+      align-content: center;
+    }
+    &start{
+      align-content: flex-start;
+    }
+    &end{
+      align-content: flex-end;
+    }
+    &between{
+      align-content: space-between;
+    }
+    &around{
+      align-content: space-around;
+    }
+}
+  .self-{
+    &center{
+      align-self: center;
+    }
+    &start{
+      align-self: flex-start;
+    }
+    &end{
+      align-self: flex-end;
+    }
+    &baseline{
+      align-self: baseline;
+    }
+    &stretch{
+      align-self: stretch ;
+    }
+}
+.flex-1{
+    flex: 1;
+}
+.is-red{
+    color: rgba(234, 28, 28, 89);
+    font-size: 12px;
+}
+//字体粗细
+@each $var in normal,bold, bolder, lighter, 100, 200, 300, 400, 500, 600, 700, 800, 900, inherit {
+    .font-weight-#{$var} {
+      font-weight: $var !important;
+    }
+}
+
+// 字体大小
+@for $i from 1 through 100 {
+    .font-size-#{$i} { font-size: 1px * $i !important; }
+}
+  // 宽度百分之百
+  .w-auto {width: auto !important;}
+  
+@for $i from 0 through 100 {
+    // 宽度 百分比
+    .w-#{$i} { width:  1% * $i !important; }
+    // 高度 百分比
+    .h-#{$i} { height:  1% * $i !important; }
+    .height-#{$i}-vh { height:  1vh * $i !important; }
+    .max-height-#{$i}-vh { max-height:  1vh * $i !important; }
+}
+
+// 宽度 固定像素
+@for $i from 0 through 1920 {
+    .width-#{$i} { width:  1px * $i !important; }
+    .max-width-#{$i} { max-width:  1px * $i !important; }
+    .min-width-#{$i} { min-width:  1px * $i !important; }
+}
+  //高度 固定像素
+@for $i from 0 through 1080 {
+    .height-#{$i} { height:  1px * $i !important; }
+    .max-height-#{$i} { max-height:  1px * $i !important; }
+    .min-height-#{$i} { min-height:  1px * $i !important; }
+    .line-height-#{$i} { line-height:  1px * $i !important; }
+}
+  // 边距
+@for $i from 0 through 200 {
+    // 外边距
+    .mb-#{$i} { margin-bottom:  1px * $i !important; }
+    .mr-#{$i} { margin-right:  1px * $i !important; }
+    .ml-#{$i} { margin-left:  1px * $i !important; }
+    .mt-#{$i} { margin-top:  1px * $i !important; }
+    .m-#{$i} { margin:  1px * $i !important; }
+    // 内边距
+    .pb-#{$i} { padding-bottom:  1px * $i !important; }
+    .pr-#{$i} { padding-right:  1px * $i !important; }
+    .pl-#{$i} { padding-left:  1px * $i !important;  }
+    .pt-#{$i} { padding-top:  1px * $i !important; }
+    .p-#{$i} { padding:  1px * $i !important; }
+}
+
+$PrimaryText: #303133;
+$RegularText: #606266;
+$SecondaryText: #909399;
+$PlaceholderText: #C0C4CC;
+$BaseBorder: #DCDFE6;
+$LightBorder: #E4E7ED;
+$LighterBorder: #EBEEF5;
+$ExtraLightBorder: #F2F6FC;
+$BasicBlack: #000000;
+$BasicWhite: #FFFFFF;
+.text-red {color:red !important;}
+.btnStyle{
+  color: #409eff;
+  cursor: pointer;
+}
+
+.paging {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 20px;
+  margin: 20px 0;
+  background-color: #fff;
+}

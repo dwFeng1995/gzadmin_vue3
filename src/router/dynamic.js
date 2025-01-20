@@ -1,0 +1,52 @@
+const dynamicRoutes = new Map([
+    ['CompanyFunction', () => import("@/views/companyManager/companyFunction/Index.vue")], //企业功能列表
+    ['Company', () => import("@/views/companyManager/company/Index.vue")],  //企业列表
+    ['CompanyCreate', () => import("@/views/companyManager/company/Create.vue")], //添加企业
+    ['CompanyUpdate', () => import("@/views/companyManager/company/Update.vue")], //编辑企业
+    ['Customer', () => import("@/views/companyManager/customer/Index.vue")], //客户列表
+    ['Canteen', () => import("@/views/companyManager/canteen/Index.vue")],  //食堂列表
+    ['CompanyClientFun', () => import("@/views/companyManager/companyClientFun/Index.vue")], //企业功能配置信息管理
+    ['CompanyConfig', () => import("@/views/companyManager/config/Index.vue")], //企业配置
+    ['CompanyMerchantPay', () => import("@/views/mch/MerchantPayment.vue")], //商户支付平台管理
+    ['YqMerchantPay', () => import("@/views/mch/YqMerchantPay.vue")], //一清支付平台管理
+    ['SecondMerchant', () => import("@/views/mch/SecondMerchant.vue")], //二级商户管理
+    ['WechatPay', () => import("@/views/mch/wechatPay/Index.vue")], //微信支付
+    ['ParametersAlipay', () => import("@/views/mch/parametersAlipay/Index.vue")], //支付宝
+    ['ParametersPci', () => import("@/views/mch/parametersPci/Index.vue")], //佳都缴费中心
+    ['ParametersAbc', () => import("@/views/mch/parametersAbc/Index.vue")], //农行缴费
+    ['ParametersAbcCode', () => import("@/views/mch/parametersAbcCode/Index.vue")],  //农行综合收银台
+    ['ParametersIku', () => import("@/views/mch/parametersIku/Index.vue")], //酷点支付 
+    ['ParametersSqb', () => import("@/views/mch/parametersSqb/Index.vue")], //收钱吧
+    ['ParametersGezi', () => import("@/views/mch/parametersGezi/Index.vue")], //系统支付
+    ['CompanyPayType', () => import("@/views/mch/CompanyPayType.vue")], //企业支付方式
+    ['CanteenPayType', () => import("@/views/mch/CanteenPayType.vue")], //H5云餐厅下单支付方式
+    ['RechargePayType', () => import("@/views/mch/RechargePayType.vue")], //企业充值方式
+    ['LogClientDebug', () => import("@/views/client/LogClientDebug.vue")], //日志列表
+    ['CanteenClient', () => import("@/views/client/canteenClient/Index.vue")], //设备列表
+    ['LogCanteenClientStore', () => import("@/views/client/logCanteenClientStore/Index.vue")], //批量添加设备
+    ['Cabinet', () => import("@/views/client/cabinet/Index.vue")], //餐柜列表
+    ['ClientWeigh', () => import("@/views/client/clientWeigh/Index.vue")], //称重设备管理
+    ['OrderingMachine', () => import("@/views/client/orderingMachine/Index.vue")], //竖屏机管理
+    ['ClientType', () => import("@/views/client/clientType/Index.vue")], //设备类型
+    ['ClientModel', () => import("@/views/client/clientModel/Index.vue")], //设备模式
+    ['ClientTypeRelevancy', () => import("@/views/client/clientTypeRelevancy/Index.vue")], //设备类型已关联模式
+    ['ClientActivationCode', () => import("@/views/client/clientActivationCode/Index.vue")], //设备激活码管理
+    ['ClientFunction', () => import("@/views/client/clientFunction/Index.vue")], //设备功能
+    ['ClientFunctionInfo', () => import("@/views/client/clientFunctionInfo/Index.vue")],  //设备功能配置信息
+    ['NutrimentCusList', () => import("@/views/nutriment/nutrimentCus/Index.vue")], //客户营养库信息
+    ['NutrimentList', () => import("@/views/nutriment/nutriment/Index.vue")], //营养成分库
+    ['FaceSystem', () => import("@/views/faceSystem/Index.vue")], //人脸系统
+    ['Agreement', () => import("@/views/agreement/Index.vue")], //协议管理
+    ['Users', () => import("@/views/auth/users/Index.vue")],  // 用户权限管理 用户列表
+    ['Menu', () => import("@/views/auth/menu/Index.vue")],    //用户权限管理  菜单列表
+    ['Permissions', () => import("@/views/adminPermissions/permissions/Index.vue")],  //企业权限管理  权限列表
+    ['AdminMenu', () => import("@/views/adminPermissions/menu/Index.vue")], //企业权限管理 菜单列表
+    ['AdminMenuType', () => import("@/views/adminPermissions/menuType/Index.vue")], //企业权限管理 菜单分类
+    ['ClientVersion', () => import("@/views/software/ClientVersion/Index.vue")], //设备版本
+    ['softVersion', () => import("@/views/software/softVersion/Index.vue")], //软件上传
+    ['UserList', () => import("@/views/userAdmin/userList/Index.vue")], //用户列表
+    ['UpgradeNotice', () => import("@/views/notice/Index.vue")], //公告升级
+
+])
+
+export default dynamicRoutes

@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+//覆盖element ui样式 写这里
+// elemnt ui 表格无数据
+.el-table__empty-block {
+    height: 0% !important;
+    min-height: 200px;
+    width: 210px !important;
+     margin: 100px auto;
+    background: url("../images/table-empty.svg") no-repeat center;
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.1) rotateZ(3deg);
+      transition: all ease 0.3s
+    }
+  }
+  .el-table__empty-text {
+    display: none;
+  }
+
+
+  //tinymce编辑器弹出框的叠放顺序，防止被element的对话框遮挡
+.tox {
+  .tox-dialog {
+    z-index: 8000 !important;
+  }
+  .tox-dialog-wrap__backdrop {
+    z-index: 7000 !important;
+  }
+}
+.tox-tinymce-aux {
+  z-index: 9999 !important;
+}
+//关闭警告
+.tox .tox-notification--warn, .tox .tox-notification--warning {
+  display: none !important;
+}
+
+//证书上传对话框
+.certificate-upload .el-upload-dragger {
+  background-color: #fff;
+  border: 1px dashed #d9d9d9;
+  border-radius: 6px;
+  box-sizing: border-box;
+  width: 270px;
+  height: 135px;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  &:hover{
+    border-color: #409eff;
+  }
+  .el-icon-upload {
+    font-size: 60px;
+    color: var(--el-text-color-placeholder);
+    margin: 40px 0 16px;
+    line-height: 23px;
+  }
+}
+
+.el-dialog__body {
+  .el-form-item__label {
+    font-size: 12px;
+  }
+   max-height: 66vh; 
+   overflow-y: auto;
+}
+
